@@ -33,7 +33,6 @@ export default function CustomerLayout({
       <BrandHeader variant="app" />
       <PageTransition>{children}</PageTransition>
       <BottomNav
-        showLogo
         items={[
           { label: "Home", href: "/home", icon: HomeIcon },
           { label: "Explore", href: "/artists", icon: ExploreIcon },

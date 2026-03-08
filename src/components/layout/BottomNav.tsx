@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ComponentType } from "react";
-import Logo from "@/components/brand/Logo";
 
 type NavItem = {
   label: string;
@@ -14,20 +13,12 @@ type NavItem = {
 
 type BottomNavProps = {
   items: NavItem[];
-  showLogo?: boolean;
 };
 
-export default function BottomNav({ items, showLogo }: BottomNavProps) {
+export default function BottomNav({ items }: BottomNavProps) {
   const pathname = usePathname();
   return (
     <nav className="fixed bottom-0 left-0 right-0 border-t border-[#E7DED0] bg-[#0B0B0B] px-5 py-3">
-      {showLogo ? (
-        <div className="absolute left-5 top-1/2 -translate-y-1/2">
-          <div className="rounded-full bg-white/90 p-1 shadow-[0_8px_20px_rgba(0,0,0,0.2)]">
-            <Logo size={22} />
-          </div>
-        </div>
-      ) : null}
       <div className="mx-auto flex max-w-[720px] items-center justify-between">
         {items.map((item) => {
           const isActive =
