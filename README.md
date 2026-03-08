@@ -18,7 +18,25 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Inter and Playfair Display.
+
+## Styling
+
+Design tokens live in [globals.css](src/app/globals.css) under `:root` and are consumed by the app directly. This keeps the CSS valid in any tooling and avoids custom at-rule warnings.
+
+## Media assets
+
+Beauty photography lives in `public/images/beauty/` and event videos live in `public/videos/`. Replace these files with brand-approved assets to refresh the look without code changes.
+
+## Production
+
+Build and start the production server:
+
+```bash
+npm run build
+npm run start
+```
+
 
 ## Learn More
 
